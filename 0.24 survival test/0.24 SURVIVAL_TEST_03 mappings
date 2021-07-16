@@ -1,0 +1,160 @@
+CLASS com/mojang/minecraft/a/a/a com/mojang/minecraft/a/a/TextureLavaFX
+CLASS com/mojang/minecraft/a/a/b com/mojang/minecraft/a/a/TextureWaterFX
+CLASS com/mojang/minecraft/net/c com/mojang/minecraft/net/NetworkManager
+CLASS com/mojang/minecraft/level/b com/mojang/minecraft/level/BlockMap
+CLASS com/mojang/minecraft/a/a com/mojang/minecraft/a/TextureManager
+	FIELD a setsetting1 Ljava/util/HashMap;
+	FIELD b textureImages Ljava/util/HashMap;
+	METHOD a registeranimation (Lcom/mojang/minecraft/a/a/c;)V
+	METHOD a load1 (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+	METHOD a get (Ljava/awt/image/BufferedImage;I)V
+	METHOD a load (Ljava/lang/String;)I
+CLASS com/mojang/minecraft/level/a com/mojang/minecraft/level/LevelIO
+	FIELD a progressBar Lcom/mojang/minecraft/h;
+	METHOD a save (Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V
+	METHOD a save (Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
+	METHOD a load (Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;
+	METHOD a loadOnline (Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;
+CLASS com/mojang/minecraft/a/d com/mojang/minecraft/a/Renderer
+CLASS com/mojang/minecraft/a/c com/mojang/minecraft/a/ShapeRenderer
+	FIELD a instance Lcom/mojang/minecraft/a/c;
+	METHOD a end ()V
+	METHOD a vertexUV (FFFFF)V
+	METHOD a color (I)V
+	METHOD b begin ()V
+	METHOD b vertex (FFF)V
+CLASS com/mojang/minecraft/k com/mojang/minecraft/Minecraft
+	FIELD A selected Lcom/mojang/minecraft/f;
+	FIELD B settings Lcom/mojang/minecraft/j;
+	FIELD C server Ljava/lang/String;
+	FIELD D port I
+	FIELD E running Z
+	FIELD F debug Ljava/lang/String;
+	FIELD G hasMouse Z
+	FIELD H fullscreen Z
+	FIELD I timer Lcom/mojang/minecraft/d;
+	FIELD J cursor Lorg/lwjgl/input/Cursor;
+	FIELD K resourcethread Lcom/mojang/minecraft/c;
+	FIELD L ticks I
+	FIELD M applet Lcom/mojang/minecraft/MinecraftApplet;
+	FIELD N lastClick I
+	FIELD a gamemode Lcom/mojang/minecraft/e/a;
+	FIELD b width I
+	FIELD c height I
+	FIELD d level Lcom/mojang/minecraft/level/Level;
+	FIELD e levelRenderer Lcom/mojang/minecraft/a/g;
+	FIELD f player Lcom/mojang/minecraft/player/Player;
+	FIELD g particleManager Lcom/mojang/minecraft/particle/a;
+	FIELD h session Lcom/mojang/minecraft/a;
+	FIELD i host Ljava/lang/String;
+	FIELD j canvas Ljava/awt/Canvas;
+	FIELD k levelLoaded Z
+	FIELD l waiting Z
+	FIELD m textureManager Lcom/mojang/minecraft/a/a;
+	FIELD n fontRenderer Lcom/mojang/minecraft/c/k;
+	FIELD o currentScreen Lcom/mojang/minecraft/c/n;
+	FIELD p progressBar Lcom/mojang/minecraft/h;
+	FIELD q renderer Lcom/mojang/minecraft/a/d;
+	FIELD r levelIo Lcom/mojang/minecraft/level/a;
+	FIELD s sound Lcom/mojang/minecraft/b/k;
+	FIELD t levelName Ljava/lang/String;
+	FIELD u levelId I
+	FIELD v robot Ljava/awt/Robot;
+	FIELD w hud Lcom/mojang/minecraft/c/l;
+	FIELD x online Z
+	FIELD y networkManager Lcom/mojang/minecraft/net/c;
+	FIELD z soundPlayer Lcom/mojang/minecraft/b/i;
+	METHOD a shutdown ()V
+	METHOD a generateLevel (I)V
+	METHOD a setCurrentScreen (Lcom/mojang/minecraft/c/n;)V
+	METHOD a setLevel (Lcom/mojang/minecraft/level/Level;)V
+	METHOD a checkGLError (Ljava/lang/String;)V
+		ARG 0 error
+	METHOD a loadOnlineLevel (Ljava/lang/String;I)Z
+	METHOD b grabmouse ()V
+CLASS com/mojang/minecraft/j com/mojang/minecraft/GameSettings
+	FIELD a music Z
+	FIELD b sound Z
+	FIELD c invertmouse Z
+	FIELD d showFrameRate Z
+	FIELD e viewDistance I
+	FIELD f viewBobbing Z
+	FIELD g anaglyph Z
+	FIELD h limitFramerate Z
+	FIELD i forwardKey Lcom/mojang/minecraft/i;
+	FIELD j leftKey Lcom/mojang/minecraft/i;
+	FIELD k backkey Lcom/mojang/minecraft/i;
+	FIELD l rightkey Lcom/mojang/minecraft/i;
+	FIELD m jumpkey Lcom/mojang/minecraft/i;
+	FIELD n buildkey Lcom/mojang/minecraft/i;
+	FIELD o chatkey Lcom/mojang/minecraft/i;
+	FIELD p toggleFogKey Lcom/mojang/minecraft/i;
+	FIELD q bindings [Lcom/mojang/minecraft/i;
+	FIELD r sting [Ljava/lang/String;
+	FIELD s saveLocationKey Lcom/mojang/minecraft/i;
+	FIELD t loadLocationKey Lcom/mojang/minecraft/i;
+	FIELD u minecraft Lcom/mojang/minecraft/k;
+	FIELD v file Ljava/io/File;
+	METHOD a load ()V
+	METHOD a getBinding (I)Ljava/lang/String;
+		ARG 1 key
+	METHOD a setBinding (II)V
+		ARG 1 key
+		ARG 2 keyid
+	METHOD b save ()V
+	METHOD b getSetting (I)Ljava/lang/String;
+		ARG 1 id
+	METHOD b toggleSetting (II)V
+		ARG 1 setting
+		ARG 2 fogValue
+CLASS com/mojang/minecraft/e/b com/mojang/minecraft/e/SurvivalGameMode
+CLASS com/mojang/minecraft/i com/mojang/minecraft/KeyBinder
+	FIELD a name Ljava/lang/String;
+	FIELD b key I
+CLASS com/mojang/minecraft/e/a com/mojang/minecraft/e/GameMode
+	METHOD a applyCracks (F)V
+CLASS com/mojang/minecraft/h com/mojang/minecraft/ProgressBarDisplay
+	FIELD a text Ljava/lang/String;
+	FIELD b minecraft Lcom/mojang/minecraft/k;
+	FIELD c title Ljava/lang/String;
+	METHOD a setProgress (I)V
+	METHOD a setTitle (Ljava/lang/String;)V
+	METHOD b setText (Ljava/lang/String;)V
+CLASS com/mojang/minecraft/g com/mojang/minecraft/OperatingSystemLookup
+	FIELD a lookup [I
+CLASS com/mojang/minecraft/a/g com/mojang/minecraft/a/LevelRenderer
+CLASS com/mojang/minecraft/f com/mojang/minecraft/MovingObjectPosition
+CLASS com/mojang/minecraft/b/i com/mojang/minecraft/b/SoundPlayer
+	FIELD a running Z
+	FIELD b dataline Ljavax/sound/sampled/SourceDataLine;
+CLASS com/mojang/minecraft/e com/mojang/minecraft/SleepForeverThread
+CLASS com/mojang/minecraft/particle/a com/mojang/minecraft/particle/ParticleManager
+CLASS com/mojang/minecraft/b/k com/mojang/minecraft/b/SoundManager
+CLASS com/mojang/minecraft/d com/mojang/minecraft/Timer
+	FIELD b velta D
+	FIELD d delta F
+	FIELD g lastSysClock J
+	FIELD h lastHRClock J
+	FIELD i adjustment D
+CLASS com/mojang/minecraft/d/h com/mojang/minecraft/d/HumanoidModel
+CLASS com/mojang/minecraft/c com/mojang/minecraft/ResourceDownloadThread
+	FIELD a running Z
+CLASS com/mojang/minecraft/c/l com/mojang/minecraft/c/HUDScreen
+CLASS com/mojang/minecraft/level/d com/mojang/minecraft/level/NextTickListEntry
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d block I
+	FIELD e ticks I
+CLASS com/mojang/minecraft/c/k com/mojang/minecraft/gui/FontRenderer
+	METHOD a render (Ljava/lang/String;III)V
+CLASS com/mojang/minecraft/a com/mojang/minecraft/SessionData
+	FIELD a usermame Ljava/lang/String;
+	FIELD b sessionId Ljava/lang/String;
+	FIELD c mppass Ljava/lang/String;
+	FIELD d allowedBlocks Ljava/util/List;
+CLASS com/mojang/minecraft/level/e com/mojang/minecraft/level/BlankName
+CLASS com/mojang/minecraft/c/n com/mojang/minecraft/gui/GuiScreen
+	METHOD a open (Lcom/mojang/minecraft/k;II)V
+	METHOD b onClose ()V
+CLASS com/mojang/minecraft/c/p com/mojang/minecraft/c/GameOverScreen
